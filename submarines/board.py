@@ -30,7 +30,12 @@ def count_remaining_ships(ships: list[list[int]], shots: list[list[bool]]) -> in
 
 
 def render_public(ships: list[list[int]], shots: list[list[bool]]) -> str:
-    pass
+    render = ""
+    for i in ships:
+        for j in i:
+            render += str(j)
+        render += "\n"
+    return render
 
 
 
