@@ -15,4 +15,10 @@ def create_bool_matrix(size: int, fill: bool = False) -> list[list[bool]]:
             matrix[i].append(fill)
     return matrix
 
+def in_bounds(size: int, x: int, y:int) -> bool:
+    if x <= size and y <= size:
+        return True
+    return False
+
+
 
