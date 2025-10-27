@@ -1,3 +1,6 @@
-from submarines.board import create_matrix, create_bool_matrix
+from submarines.board import create_matrix, create_bool_matrix, in_bounds, count_remaining_ships
 
-print(create_bool_matrix(3))
+ships = create_matrix(3)
+shots = create_bool_matrix(3)
+print(in_bounds(3, 4, 3))
+print(count_remaining_ships(ships, shots))

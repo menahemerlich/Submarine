@@ -1,24 +1,36 @@
 
 def create_matrix(size: int, fill: int = 0) -> list[list[int]]:
-    matrix = []
+    ships = []
     for i in range(size):
-        matrix.append([])
+        ships.append([])
         for j in range(size):
-            matrix[i].append(fill)
-    return matrix
+            ships[i].append(fill)
+    return ships
 
 def create_bool_matrix(size: int, fill: bool = False) -> list[list[bool]]:
-    matrix = []
+    shots = []
     for i in range(size):
-        matrix.append([])
+        shots.append([])
         for j in range(size):
-            matrix[i].append(fill)
-    return matrix
+            shots[i].append(fill)
+    return shots
 
 def in_bounds(size: int, x: int, y:int) -> bool:
     if x <= size and y <= size:
         return True
     return False
+
+def count_remaining_ships(ships: list[list[int]], shots: list[list[bool]]) -> int:
+    count = 0
+    for i in range(len(ships)):
+        for j in range(len(ships)):
+            if ships[i][j] == 1 and shots[i][j] == False:
+                count += 1
+    return count
+
+
+def render_public(ships: list[list[int]], shots: list[list[bool]]) -> str:
+    pass
 
 
 
